@@ -21,6 +21,9 @@ for files in range(1, end+1):
                 line1 += "`&" + str(index) + ";` | "
                 line += " --- | "
             else:
+                line0 += '&#' + str(index) + "; | " 
+                line1 += "`&" + str(index) + ";` | "
+                line += " --- | "
                 file.write(line0 + "\n")
                 if not table :
                     table = True
