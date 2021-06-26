@@ -34,5 +34,5 @@ for files in range(1, end+1):
                     
                 tmpCount = 2
                 line0 = '| &#' + str(index) + "; | " 
-                line1 = "| `&" + str(index) + ";` `" + str(hex(index)) + "` | "
+                line1 = "| &" + str(index) + ";<br>" + str(hex(index)) + "<br>" + str(bin(index)) + " | "
         file.write(line0 + "\n" + line1 + "\n")
