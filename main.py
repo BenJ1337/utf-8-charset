@@ -1,10 +1,10 @@
-num = 3000
-end = 10
+num = 4000
+end = 100
 for files in range(1, end+1):
     with open("unicode_"+str(num*files)+".md", "w") as file:
         file.write("")
         start = 33
-        print(files)
+        #print(files)
         if files != 1:
             start = num*(files-1) + 1
 
@@ -14,7 +14,7 @@ for files in range(1, end+1):
         tmpCount = 0
         table = False
         for index in range(start, num*files+1):
-            print("line: " + str(index))
+            #print("line: " + str(index))
             if(tmpCount < 10):
                 tmpCount += 1
                 line0 += '&#' + str(index) + "; | " 
