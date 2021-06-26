@@ -11,15 +11,16 @@ for files in range(1, end+1):
         line0 = "| "
         line1 = "| "
         line = "| "
-        tmpCount = 0
+        tmpCount = 1
         table = False
         for index in range(start, num*files+1):
             #print("line: " + str(index))
-            if(tmpCount < 10):
+            if(tmpCount <= 10):
                 tmpCount += 1
                 line0 += '&#' + str(index) + "; | " 
                 line1 += "`&" + str(index) + ";` | "
-                line += " --- | "
+                if not table :
+                    line += " --- | "
             else:
                 file.write(line0 + "\n")
                 if not table :
@@ -27,8 +28,7 @@ for files in range(1, end+1):
                     file.write(line + "\n")
                 file.write(line1 + "\n")
                     
-                tmpCount = 0
-                line0 += '&#' + str(index) + "; | " 
-                line1 += "`&" + str(index) + ";` | "
-                line += " --- | "
+                tmpCount = 2
+                line0 += '| &#' + str(index) + "; | " 
+                line1 += "| `&" + str(index) + ";` | "
         file.write(line0 + "\n" + line1 + "\n")
