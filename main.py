@@ -20,7 +20,7 @@ for files in range(1, end+1):
                 line1 += "`&" + str(index) + ";` | "
                 line += " --- | "
             else:
-                file.write(line0 + "\n" + line + "\n" + line1 + "\n")
+                file.write(line0 + "\n" + line + "\n" + line1 + "\n" + line + "\n")
                 tmpCount = 0
                 line0 = "| "
                 line1 = "| "
