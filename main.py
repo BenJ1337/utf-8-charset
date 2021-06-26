@@ -1,5 +1,5 @@
 num = 20000
-end = 5
+end = 10
 for files in range(1, end+1):
     with open("unicode_"+str(num*files)+".md", "w") as file:
         file.write("")
@@ -20,7 +20,7 @@ for files in range(1, end+1):
                 line0 += '&#' + str(index) + "; | " 
                 line1 += "`&" + str(index) + ";` | "
                 if not table :
-                    line += " --- | "
+                    line += " :---: | "
             else:
                 file.write(line0 + "\n")
                 if not table :
