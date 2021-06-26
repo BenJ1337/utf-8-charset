@@ -1,7 +1,7 @@
-num = 10000
+num = 20000
 end = 5
 for files in range(1, end+1):
-    with open("unicode_"+str(files)+"_"+str(num*files)+".md", "w") as file:
+    with open("unicode_"+str(num*files)+".md", "w") as file:
         file.write("")
         start = 33
         #print(files)
