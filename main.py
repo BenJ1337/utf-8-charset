@@ -1,6 +1,6 @@
 for files in range(1, 10):
     with open("unicode_"+str(10000*files)+".md", "w") as file:
-        file.write("#### ")
+        file.write("### ")
         start = 33
         print(files)
         if files != 1:
@@ -9,5 +9,5 @@ for files in range(1, 10):
             out = ""
             if index % 1000 == 0:
                 out += "\n---\n"
-            out += '&#' + str(index) + "; `&#38;" + str(index) + ";`  "
+            out += '&#' + str(index) + "; `&" + str(index) + ";`  "
             file.write(out)
