@@ -8,6 +8,7 @@ for files in range(1, 10):
 
         line0 = "| "
         line1 = "| "
+        line = "| "
         tmpCount = 0
         for index in range(start, 10000*files):
             if(tmpCount < 10):
@@ -16,8 +17,9 @@ for files in range(1, 10):
                 #    out += "\n---\n### "
                 line0 += '&#' + str(index) + "; | " 
                 line1 += "`&" + str(index) + ";` | "
+                line += " --- | "
             else:
-                file.write(line0 + "\n" + line1)
+                file.write(line0 + "\n" + line + "\n" + line1)
                 tmpCount = 0
                 line0 = "| "
                 line1 = "| "
