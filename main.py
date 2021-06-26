@@ -5,9 +5,19 @@ for files in range(1, 10):
         print(files)
         if files != 1:
             start = 10000*(files-1) + 1
+
+        line0 = "| "
+        line1 = "| "
+        tmpCount = 0
         for index in range(start, 10000*files):
-            out = ""
-            if index % 1000 == 0:
-                out += "\n---\n"
-            out += '&#' + str(index) + "; `&" + str(index) + ";`  "
-            file.write(out)
+            if(tmpCount < 10):
+                tmpCount += 1
+                #if index % 1000 == 0:
+                #    out += "\n---\n### "
+                line0 += '&#' + str(index) + "; | " 
+                line1 += "`&" + str(index) + ";` | "
+            else:
+                file.write(line0 + "\n" + line1)
+                tmpCount = 0
+                line0 = "| "
+                line1 = "| "
