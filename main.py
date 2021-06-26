@@ -1,4 +1,4 @@
-num = 1000
+num = 2000
 end = 5
 for files in range(1, end+1):
     with open("unicode_"+str(num*files)+".md", "w") as file:
@@ -29,6 +29,6 @@ for files in range(1, end+1):
                 file.write(line1 + "\n")
                     
                 tmpCount = 2
-                line0 += '| &#' + str(index) + "; | " 
-                line1 += "| `&" + str(index) + ";` | "
+                line0 = '| &#' + str(index) + "; | " 
+                line1 = "| `&" + str(index) + ";` | "
         file.write(line0 + "\n" + line1 + "\n")
