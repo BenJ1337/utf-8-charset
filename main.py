@@ -22,7 +22,7 @@ for files in range(1, end+1):
             if(tmpCount <= 10):
                 tmpCount += 1
                 line0 += '&#' + str(index) + "; | " 
-                line1 += "<pre>&" + str(index) + ";<br>" + str(hex(index)) + "<br>" + str(bin(index)) + "</pre> | "
+                line1 += "&" + str(index) + ";<br>" + str(hex(index)) + "<br>" + str(bin(index)) + " | "
                 if not table :
                     line += " :---: | "
             else:
