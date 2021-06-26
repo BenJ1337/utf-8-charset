@@ -1,4 +1,4 @@
-num = 1000
+num = 2000
 end = 100
 for files in range(1, end):
     with open("unicode_"+str(num*files)+".md", "w") as file:
@@ -15,8 +15,6 @@ for files in range(1, end):
         for index in range(start, num*files):
             if(tmpCount < 10):
                 tmpCount += 1
-                #if index % 1000 == 0:
-                #    out += "\n---\n### "
                 line0 += '&#' + str(index) + "; | " 
                 line1 += "`&" + str(index) + ";` | "
                 line += " --- | "
