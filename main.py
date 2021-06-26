@@ -1,6 +1,6 @@
 num = 3000
 for files in range(1, 10):
-    with open("unicode_"+str(num*files)+".md", "w") as file:
+    with open("unicode_"+str(num*files)+".html", "w") as file:
         file.write("")
         start = 33
         print(files)
