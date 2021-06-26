@@ -1,4 +1,4 @@
-num = 3000
+num = 2000
 end = 5
 for files in range(1, end+1):
     with open("unicode_"+str(num*files)+".md", "w") as file:
