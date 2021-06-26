@@ -1,4 +1,4 @@
-num = 20000
+num = 15000
 end = 50
 for files in range(1, end+1):
     ind = ""
